@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Reservation</title>
+    <style type="text/css">
+        body {
+            background-image: url("https://thumbs.dreamstime.com/b/cozy-restaurant-tables-ready-dinner-39875776.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 100px;
+            font-size: 48px;
+            color: white;
+            text-shadow: 2px 2px #000;
+        }
+        a {
+            display: block;
+            margin: 0 auto;
+            margin-top: 50px;
+            padding: 10px 20px;
+            background-color: #008CBA;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 24px;
+            width: 200px;
+            cursor: pointer;
+        }
+        form {
+            margin: 0 auto;
+            width: 50%;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="tel"],
+        input[type="datetime-local"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        input[type="submit"] {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #008CBA;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #008CBA;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Our Restaurant</h1>
+    <a href="#reservation-form">Make a Reservation</a>
+
+    <form id="reservation-form" action="backend.php" method="POST">
+        <h2>Table Reservation</h2>
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+        <label for="contact">Contact Number:</label>
+        <input type="tel" name="contact" required>
+        <label for="table">Table Number:</label>
+        <input type="number" name="table" required>
+        <label for="date">Date:</label>
+        <input type="datetime-local" name="date" id="date" required>
+        <span id="date-error" class="error"></span>
+        <label for="guests">Number of Guests:</label>
+        <input type="number" name="guests" required>
+        
+         
+    </form>
+    <form action="submission.html"  method="POST">
+        <button type="submit" class="button">submit reservation</button>
+   </form>
+    <form action="db mini1.html">
+        <button type="submit" class="button">back</button> 
+        
+       
+    </form>
+
+
+</body>
+</html>
